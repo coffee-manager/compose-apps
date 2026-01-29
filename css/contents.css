@@ -1,0 +1,98 @@
+/* 메인 레이아웃 */
+.container {
+    max-width: 520px;
+    width: 92%;
+    margin: 40px auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* 상단 설명 */
+.intro h1 {
+    font-size: 26px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+.intro p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.intro .sub {
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* 다운로드 버튼 */
+/* 다운로드 버튼 */
+.download {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    background: linear-gradient(135deg, #4a6cf7, #6f86ff);
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    box-shadow: 0 6px 15px rgba(74, 108, 247, 0.3);
+
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
+}
+
+/* 마우스 올렸을 때 */
+.btn-download:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(74, 108, 247, 0.45);
+
+    background: linear-gradient(135deg, #5b7cff, #7c92ff);
+}
+
+/* 클릭할 때 */
+.btn-download:active {
+    transform: translateY(0);
+
+    box-shadow: 0 4px 10px rgba(74, 108, 247, 0.3);
+}
+
+.btn-download:hover {
+    opacity: 0.9;
+}
+
+/* 설치 방법 */
+.install h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.install ol {
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.install li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}

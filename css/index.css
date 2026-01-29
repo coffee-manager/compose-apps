@@ -1,19 +1,8 @@
-/* 전체 가운데 정렬 */
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-  background: #f5f6f8;
-}
-
 /* 리스트 */
 .download-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   max-width: 420px;
   display: flex;
@@ -49,21 +38,6 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.donate {
-  position: fixed;
-  top: 16px;
-  right: 20px;
-  font-size: 14px;
-  color: #5c3b00;
-  text-decoration: none;
-  opacity: 0.8;
-}
-
-.donate:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
 .download-list a { text-decoration: none; }
 
 .dev-contact {
@@ -81,3 +55,14 @@ body {
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .download-list {
+    gap: 1.5rem;
+    padding: 0 16px;
+  }
+
+  .download-list button {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
