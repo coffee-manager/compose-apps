@@ -1,0 +1,58 @@
+/* 후원 안내 영역 */
+.support {
+    max-width: 720px;
+    margin: 60px auto;
+    padding: 32px 28px;
+
+    background: #fafafa;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* 제목 */
+.support h2 {
+    margin-bottom: 24px;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+
+    color: #222;
+}
+
+/* 기본 문단 */
+.support p {
+    margin-bottom: 16px;
+
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* 마지막 감사 문구 */
+.support .thanks {
+    margin-top: 28px;
+
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: center;
+
+    color: #222;
+}
+
+/* 모바일 대응 */
+@media (max-width: 480px) {
+    .support {
+        margin: 40px 16px;
+        padding: 24px 20px;
+    }
+
+    .support h2 {
+        font-size: 1.4rem;
+    }
+
+    .support p {
+        font-size: 0.95rem;
+    }
+}
