@@ -10,12 +10,17 @@
     text-align: center;
 }
 
+.intro {
+    margin-top: 50px;
+}
+
 /* 상단 설명 */
 .intro h1 {
     font-size: 26px;
     margin-bottom: 16px;
     font-weight: 700;
 }
+
 .intro p {
     font-size: 16px;
     line-height: 1.6;
@@ -26,6 +31,11 @@
     margin-top: 10px;
     color: #666;
     font-size: 14px;
+}
+
+.intro h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
 }
 
 /* 다운로드 버튼 */
@@ -53,10 +63,9 @@
 
     box-shadow: 0 6px 15px rgba(74, 108, 247, 0.3);
 
-    transition:
-            transform 0.2s ease,
-            box-shadow 0.2s ease,
-            background 0.2s ease;
+    transition: transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 /* 마우스 올렸을 때 */
