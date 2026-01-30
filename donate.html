@@ -62,17 +62,59 @@
             사용해주셔서 감사합니다 😊
         </p>
 
-        <p>
-            <br>
-            <br>
-            [후원 계좌]<br>
-            3333-34-2976690<br>
-            카카오뱅크<br>
-            김지훈
-        </p>
+        <p id="donateAccount" style="margin-top: 50px"></p>
+        <div class="donate-wrap" style="margin-top: 50px">
+            <button id="donateAccountCopy">계좌번호 복사</button>
+            <div id="toast">계좌번호가 복사되었습니다.</div>
+            <button id="donateNaverPay" class="naver">네이버페이 후원</button>
+        </div>
     </section>
 </main>
 <div id="footer"></div>
 <script src="js/script.js?v=20260130-3"></script>
 </body>
+<script>
+    const accountNumber = "3333-34-2976690";
+    const bankName = "카카오뱅크";
+    const ownerName = "김지훈";
+
+    const donateEl = document.getElementById("donateAccount");
+
+    // 내용 세팅
+    donateEl.innerHTML = `
+                        <br><br>
+                        [후원 계좌]<br>
+                        ${accountNumber}<br>
+                        ${bankName}<br>
+                        ${ownerName}
+    `;
+
+    // 클릭하면 복사 + 알림
+    document.getElementById('donateAccountCopy').onclick = () => {
+        navigator.clipboard.writeText(accountNumber.replace(/[^0-9]/g, '')).then(() => {
+            showToast("계좌번호가 복사되었습니다.");
+        });
+    };
+
+    document.getElementById('donateNaverPay').onclick = function () {
+        /**
+         * 네이버페이 송금 페이지로 이동
+         */
+        const url = 'https://pay.naver.com/remit/qr/inflow?v=1&a=3333342976690&c=090&d=8c746cae345813e054d699d4034d7206';
+        window.open(url, '_blank', 'noopener');
+    };
+
+    /**
+     * 토스트 메시지 표시
+     */
+    function showToast(message) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.add('show');
+
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 1500);
+    }
+</script>
 </html>

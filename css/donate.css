@@ -41,18 +41,56 @@
     color: #222;
 }
 
-/* 모바일 대응 */
-@media (max-width: 480px) {
-    .support {
-        margin: 40px 16px;
-        padding: 24px 20px;
-    }
+.donate-wrap {
+    display: flex;
+    justify-content: center; /* 가로 중앙 */
+    align-items: center;     /* 세로 중앙 */
+    gap: 12px;
+}
+.donate-wrap button {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    width: 40%;
+}
 
-    .support h2 {
-        font-size: 1.4rem;
-    }
+.donate-wrap button:hover {
+    background: #f5f5f5;
+}
 
-    .support p {
-        font-size: 0.95rem;
-    }
+.donate-wrap .naver {
+    background: #03c75a;
+    color: #fff;
+    border-color: #03c75a;
+    font-size: 12px;
+    width: 40%;
+}
+
+.donate-wrap .naver:hover {
+    background: #02b351;
+}
+
+#toast {
+    z-index: 9999;
+
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    padding: 10px 16px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s, transform .3s;
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
