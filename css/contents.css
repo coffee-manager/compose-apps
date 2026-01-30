@@ -14,20 +14,20 @@
 }
 
 .intro .sub {
-    margin-top: 10px;
+    margin-top: 3px;
     color: #666;
     font-size: 14px;
 }
 
 /* 상단 설명 */
 .intro h1 {
-    font-size: 26px;
+    font-size: 30px;
     margin-bottom: 16px;
     font-weight: 700;
 }
 
 .intro p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.6;
     margin: 0;
 }
@@ -35,13 +35,13 @@
 .sub {
     margin-top: 10px;
     color: #666;
-    font-size: 11px;
+    font-size: 14px;
 }
 .small{
-    font-size: 9px;
+    font-size: 11px;
 }
 .intro h2 {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 12px;
 }
 
@@ -62,7 +62,7 @@
     background: linear-gradient(135deg, #4a6cf7, #6f86ff);
     color: #fff;
 
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     text-decoration: none;
 
@@ -97,7 +97,7 @@
 
 /* 설치 방법 */
 .install h2 {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 12px;
 }
 
@@ -109,7 +109,7 @@
 }
 
 .install li {
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 25px;
 }
 
@@ -124,7 +124,7 @@
 
 /* 설치 방법 */
 .usage h2 {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 12px;
 }
 
@@ -138,7 +138,7 @@
 
 .usage li {
     list-style: none;
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 25px;
 }
 
