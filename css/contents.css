@@ -103,7 +103,11 @@
 /* 설치 방법 */
 .install h2 {
     font-size: 22px;
-    margin-bottom: 12px;
+    margin-bottom: 50px;
+}
+
+.install {
+    margin-top: 50px;
 }
 
 .install ol {
@@ -127,10 +131,14 @@
     object-fit: cover;
 }
 
+.usage {
+    margin-top: 50px;
+}
+
 /* 설치 방법 */
 .usage h2 {
     font-size: 22px;
-    margin-bottom: 12px;
+    margin-bottom: 50px;
 }
 
 .usage ol {
