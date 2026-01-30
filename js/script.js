@@ -6,7 +6,7 @@ function loadCommon() {
         .then(r => r.text())
         .then(html => document.getElementById('header').innerHTML = html);
 
-    fetch('footer.html?v=20260130-2')
+    fetch('footer.html?v=20260130-3')
         .then(r => r.text())
         .then(html => document.getElementById('footer').innerHTML = html);
 }
