@@ -4,15 +4,15 @@
 body {
     margin: 0;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: sans-serif;
     background: #f5f6f8;
 }
 
 main {
     padding: 80px 0; /* 위아래 여백 */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /*
@@ -20,15 +20,21 @@ main {
 */
 .top-bar {
     position: fixed;
-    top: 16px;
+    top: 0;
     left: 0;
     right: 0;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
+
+    background: rgba(255,255,255,0.85);
+
+    height: 40px;
 }
 
 .top-bar a {
+    font-weight: bold;
+    margin-top: 10px;
     font-size: 14px;
     color: #5c3b00;
     text-decoration: none;
@@ -40,29 +46,14 @@ main {
 }
 
 /*
-    후원
-*/
-.donate {
-    position: fixed;
-    top: 16px;
-    right: 20px;
-    font-size: 14px;
-    color: #5c3b00;
-    text-decoration: none;
-    opacity: 0.8;
-}
-
-.donate:hover {
-    opacity: 1;
-    text-decoration: underline;
-}
-
-/*
     하단
 */
 .footer {
+    background: rgba(255,255,255,0.85);
+
     position: fixed;
-    bottom: 12px;
+    bottom: 0;
+    height: 30px;
     width: 100%;
     left: 0;
     right: 0;
@@ -70,7 +61,8 @@ main {
 }
 
 .footer a {
-    font-size: 12px;
+    font-weight: bold;
+    font-size: 14px;
     color: #5c3b00;
     opacity: 0.6;
     text-decoration: none;
