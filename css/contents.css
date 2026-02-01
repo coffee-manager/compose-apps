@@ -9,10 +9,6 @@
     text-align: center;
 }
 
-.intro {
-    margin-top: 50px;
-}
-
 .intro .sub {
     margin-top: 3px;
     color: #666;
@@ -106,8 +102,9 @@
     margin-bottom: 50px;
 }
 
-.install {
+.install h3 {
     margin-top: 50px;
+    font-size: 18px;
 }
 
 .install ol {
@@ -125,41 +122,15 @@
 .install img {
     width: 100%;
     max-width: 200px;
-    margin-top: 10px;
+    margin: auto;
     display: block;
     height: auto;
     object-fit: cover;
 }
 
-.usage {
-    margin-top: 50px;
-}
-
-/* 설치 방법 */
-.usage h2 {
-    font-size: 22px;
-    margin-bottom: 50px;
-}
-
-.usage ol {
-    list-style: none;
-    text-align: left;
-    max-width: 300px;
-    margin: 0 auto;
-    padding-left: 20px;
-}
-
-.usage li {
-    list-style: none;
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-.usage img {
-    width: 100%;
-    max-width: 200px;
-    margin-top: 10px;
-    display: block;
-    height: auto;
-    object-fit: cover;
+/* 가로선 */
+.hr {
+    width: 100%;      /* 길이 */
+    height: 2px;      /* 두께 */
+    background: #ccc; /* 색 */
 }
