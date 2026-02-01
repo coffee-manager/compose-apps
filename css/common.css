@@ -44,26 +44,3 @@ main {
 .top-bar a:hover {
     opacity: 1;
 }
-
-/*
-    하단
-*/
-.footer {
-    background: rgba(255,255,255,0.85);
-
-    position: fixed;
-    bottom: 0;
-    height: 40px;
-    width: 100%;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-
-.footer a {
-    font-weight: bold;
-    font-size: 14px;
-    color: #5c3b00;
-    opacity: 0.6;
-    text-decoration: none;
-}
