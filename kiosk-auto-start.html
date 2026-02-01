@@ -37,8 +37,9 @@
                 <img src="img/kiosk-auto-start/keyboard1.png" style="max-width: 300px; margin-top: 10px" alt="가상키보드1">
                 <img src="img/kiosk-auto-start/keyboard2.png" style="max-width: 300px; margin-top: 10px" alt="가상키보드2">
 
-                <p class="sub"> 이 키보드 이용하여 브라우저에 URL 입력</p>
-
+                <p class="sub"> 이 키보드 이용하여 브라우저에</p>
+                <p class="sub" style="cursor:pointer; color:blue; text-decoration:underline;" id="currentUrl"></p>
+                <p class="sub" >▲ 위 URL 입력</p>
             </li>
             <li>프로그램 다운로드<br>
                 <p class="sub">대부분 32bit 버전 다운로드<br>신규매장 64bit 버전 다운로드</p>
@@ -48,7 +49,7 @@
                 <p class="sub">- 파일에 우클릭 ➝ 압축 풀기 선택</p>
                 <p class="sub">- 파일을 길게 터치하면 우클릭이 됩니다.</p>
                 <p class="sub">- 혹은 파일 더블 클릭 후 압축풀기 클릭</p>
-                <p style="font-size: 9px; margin: 0">▼(아래 이미지 참조)</p>
+                <p style="font-size: 10px; margin: 0">▼(아래 이미지 참조)</p>
                 <img src="img/unzip.png" style="max-width: 200px; margin: 0" alt="압축 풀기">
             </li>
             <li><strong>setup</strong> 파일 더블클릭
@@ -72,5 +73,28 @@
 </main>
 
 <script src="js/script.js?v=20260201"></script>
+<script>
+    /**
+     * 현재 페이지 URL을 화면에 출력
+     */
+    function getParentUrl() {
+        const url = new URL(location.href);
+        const paths = url.pathname.split('/').filter(Boolean);
+        paths.pop(); // 현재 단계 제거
+        return url.origin + '/' + (paths.length ? paths.join('/') + '/' : '');
+    }
+
+    /**
+     * 부모 주소 표시 + 클릭 시 이동
+     */
+    function initParentLink() {
+        const el = document.getElementById('currentUrl');
+        const parentUrl = getParentUrl();
+        el.textContent = parentUrl;
+        el.onclick = () => location.href = parentUrl;
+    }
+    initParentLink();
+    document.getElementById('currentUrl').textContent = getParentUrl();
+</script>
 </body>
 </html>
