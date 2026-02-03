@@ -43,7 +43,7 @@
 
 /* 다운로드 버튼 */
 .download {
-    margin: 40px 0;
+    margin: 40px 0 0 0;
     text-align: center;
 
     display: flex;
