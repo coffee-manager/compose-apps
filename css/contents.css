@@ -133,4 +133,5 @@
     width: 100%;      /* 길이 */
     height: 2px;      /* 두께 */
     background: #ccc; /* 색 */
+    margin: 20px 0 20px 0;
 }
