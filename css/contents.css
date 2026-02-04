@@ -97,29 +97,29 @@
 }
 
 /* 설치 방법 */
-.install h2 {
+.contents h2 {
     font-size: 22px;
     margin-bottom: 50px;
 }
 
-.install h3 {
+.contents h3 {
     margin-top: 50px;
     font-size: 18px;
 }
 
-.install ol {
+.contents ol {
     text-align: left;
     max-width: 300px;
     margin: 0 auto;
     padding-left: 20px;
 }
 
-.install li {
+.contents li {
     font-size: 18px;
     margin-bottom: 25px;
 }
 
-.install img {
+.contents img {
     width: 100%;
     max-width: 200px;
     margin: auto;
