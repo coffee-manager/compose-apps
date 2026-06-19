@@ -43,4 +43,4 @@ function loadCommon() {
 }
 
 loadCommon();
-setDeskTopBitMsg();
+// setDeskTopBitMsg();
