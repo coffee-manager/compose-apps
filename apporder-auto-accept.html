@@ -1,137 +1,252 @@
-<!DOCTYPE html>
-<html lang="kr">
+<!doctype html>
+<html lang="ko">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R77B22K4Y5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-R77B22K4Y5');
     </script>
-    <title>앱오더 자동수락</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="css/common.css?v=20260331">
-    <link rel="stylesheet" href="css/contents.css?v=20260331">
+    <title>앱오더 자동수락 · 점주 도구함</title>
+    <meta name="description" content="앱오더·배민 포장 주문을 포스기가 알아서 수락하는 무료 프로그램. 설치 방법과 사용 방법.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+    <link rel="stylesheet" href="css/site.css?v=20261030">
 </head>
 <body>
-<div id="header"></div>
-<main class="container">
-    <section class="intro">
-        <h1>앱오더 자동수락 프로그램</h1>
-        <p class="sub">
-            힘들게 포스기까지 뛰어갈 필요 없어요!<br>
-        </p>
-        <p class="sub">
-            자동으로 모든 앱오더 주문을 수락해줘요.
-        </p>
+<header class="top">
+    <div class="wrap">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3v2M12 3v2"/></svg></span>점주 도구함</a>
+        <nav>
+            <a class="nav-programs" href="index.html#programs">프로그램</a>
+            <a href="https://open.kakao.com/o/s4DLFNYh" target="_blank" rel="noopener noreferrer">개발자 문의</a>
+            <a href="donate.html">후원하기</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="wrap crumb"><a href="index.html#programs">← 프로그램 목록</a></div>
+
+    <section class="wrap app-hero">
+        <div>
+            <h1>앱오더 자동수락</h1>
+            <p class="lead">
+                앱오더·배민 포장 주문이 들어오면 포스기가 알아서 수락합니다.
+                손님 응대 중에도, 음료 만드는 중에도 주문을 놓치지 않아요.
+            </p>
+            <p class="where">포스기(Windows)에 설치 · 무료</p>
+            <figure class="shot" style="margin-top: 36px">
+                <img src="img/apporder/main-on.png" width="514" height="141" alt="앱오더 자동수락 창. 초록 테두리 안에 '앱오더 자동수락 동작 중'이라고 적혀 있다">
+                <figcaption>켜 두기만 하면 됩니다. 초록 테두리면 동작 중이에요.</figcaption>
+            </figure>
+        </div>
+
+        <aside class="slip" data-release="apporder-" aria-label="설치 파일">
+            <div class="slip-title"><span>최신 버전</span><span>Windows</span></div>
+            <div class="slip-version num" data-r="version">v1.65</div>
+            <hr class="slip-cut">
+            <dl>
+                <dt>올린 날</dt><dd data-r="date">2026.10.30</dd>
+                <dt>파일 크기</dt><dd data-r="size">30MB</dd>
+                <dt>설치 위치</dt><dd>D:\AppOrder</dd>
+                <dt>설치할 곳</dt><dd>포스기</dd>
+            </dl>
+            <a class="btn btn-get" href="https://github.com/coffee-manager/deploy/releases/download/apporder-latest/compose-apporder-setup.exe">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+                설치 파일 받기
+            </a>
+            <p class="slip-foot">32bit·64bit 구분 없이 하나로 설치돼요.<br>다음부터는 프로그램이 알아서 업데이트해요.</p>
+        </aside>
     </section>
 
-    <section class="download">
-        <a href="https://github.com/coffee-manager/deploy/releases/download/apporder-v1.51/apporder_32bit.zip" class="btn-download">32bit 다운로드</a>
-        <a href="https://github.com/coffee-manager/deploy/releases/download/apporder-v1.51/apporder_64bit.zip" class="btn-download">64bit 다운로드</a>
-    </section>
-    <p id="desktop-bit-msg" class="sub" style="margin-bottom: 5px; color: orangered"></p>
-    <p class="sub" style="margin-bottom: 40px">
-        (포스기에 다운로드 및 설치)
-    </p>
-    <div class="hr"></div>
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>이런 점이 좋아요</h2>
+            </div>
+            <div class="perks">
+                <div class="perk">
+                    <div>
+                        <h3>주문 알림에 뛰어가지 않아도 돼요</h3>
+                        <p>앱오더 창이 닫혀 있어도 주문이 오면 창을 열어 수락합니다. 배민 포장 주문도 같이 받아요.</p>
+                        <p>버튼을 한 번 누르면 빨간 테두리로 바뀌며 잠시 멈추고, 다시 누르면 이어서 동작합니다.</p>
+                    </div>
+                    <figure class="shot">
+                        <img src="img/apporder/main-off.png" width="514" height="141" alt="빨간 테두리 안에 '앱오더 자동수락 미 동작 중'이라고 적힌 창">
+                        <figcaption>빨간 테두리는 멈춘 상태예요.</figcaption>
+                    </figure>
+                </div>
 
-    <section class="contents">
-        <h2>설치 방법</h2>
-        <ol>
-            <li>프로그램 다운로드<br>
-                <p class="sub">대부분 32bit 버전 다운로드<br>신규매장 64bit 버전 다운로드</p>
-                <p class="sub">Tip: 내컴퓨터(내PC)➝ 우클릭➝ 속성➝ 시스템 종류➝ 32/64 확인</p>
-                <p class="sub">Tip: 두 버전 모두 다운 후 시도해보셔도 됩니다.</p>
-            </li>
-            <li>압축 해제<br>
-                <p class="sub">- 파일에 우클릭 ➝ 압축 풀기 선택</p>
-                <p class="sub">- 파일을 길게 터치하면 우클릭이 됩니다.</p>
-                <p class="sub">- 혹은 파일 더블 클릭 후 압축풀기 클릭</p>
-                <p style="font-size: 10px; margin: 0">▼(아래 이미지 참조)</p>
-                <img src="img/unzip.png" style="max-width: 200px; margin: 0" alt="압축 풀기">
-            </li>
-            <li>setup 파일 더블클릭
-                <img src="img/deposit/setup.png" style="max-width:300px; margin: 10px 0 0;" alt="설치 완료 화면">
-                <p class="sub">▲ 위 이미지 처럼 나온다면 정상 설치 완료</p>
-            </li>
-            <li>
-                바탕화면에 '앱오더 자동수락' 파일 실행
-                <img class="img-left" src="img/apporder-auto-accept/file.png" style="max-width: 120px; margin: 0" alt="실행 파일">
-                <p class="sub">위 파일 더블클릭</p>
-                <img class="img-left" src="img/apporder-auto-accept/main.png" style="max-width: 100%; margin: 0" alt="실행 화면">
-                <p class="sub">위 이미지처럼 실행되면 확인 완료</p>
-            </li>
-        </ol>
-    </section>
+                <div class="perk">
+                    <div>
+                        <h3>우리 매장에 맞게 바꿔요</h3>
+                        <p>앱오더·배민 포장·배민 배달을 따로 켜고 끕니다. 음료 제조 시간, 영업 시간, 자동으로 포장 완료할 주문 개수도 정할 수 있어요.</p>
+                        <p class="note">포스기가 느린 매장은 인식 간격을 늘리면 부담이 줄어요.</p>
+                    </div>
+                    <figure class="shot">
+                        <img src="img/apporder/option.png" width="784" height="591" alt="옵션 창. 성능 설정, 자동수락 설정, 음료 제조 시간, 영업 시간, 프로그램 항상 동작, 자동 포장 완료 설정">
+                    </figure>
+                </div>
 
-    <div class="hr"></div>
+                <div class="perk">
+                    <div>
+                        <h3>업데이트는 버튼 한 번</h3>
+                        <p>새 버전이 나오면 창 위에 알림 띠가 뜹니다. [업데이트]를 누르면 받아서 설치하고 다시 켜져요.</p>
+                        <p>창을 숨겨 두었다면 화면 오른쪽 아래 알림으로 알려 드려요.</p>
+                    </div>
+                    <figure class="shot">
+                        <img src="img/apporder/update-banner.png" width="514" height="216" alt="창 위쪽에 '새 버전 V1.66 이 나왔습니다' 알림 띠와 나중에, 업데이트 버튼">
+                        <figcaption>예시 화면이에요. 실제 버전 번호는 다를 수 있어요.</figcaption>
+                    </figure>
+                </div>
 
-    <section class="contents">
-        <h2>사용 방법</h2>
-        <h3>[시작 / 정지]</h3>
-        <img class="img-center" src="img/apporder-auto-accept/on-off.png" style="max-width: 400px" alt="시작 종료">
-        <p class="sub">
-            가운데 초록/빨강 테두리 버튼은<br>
-            ▶️(시작) / ⏸️(정지) 기능
-        </p>
-
-        <h3>[옵션 설정]</h3>
-        <img class="img-center" src="img/apporder-auto-accept/touch_option.png" style="max-width: 400px" alt="실행 파일">
-        <p class="sub">옵션 설정 열기</p>
-        <img class="img-center" src="img/apporder-auto-accept/option.png" style="max-width: 100%" alt="실행 파일">
-        <p class="sub">매장에 필요한 설정으로 변경</p>
+                <div class="perk">
+                    <div>
+                        <h3>켜는 걸 잊어도 괜찮아요</h3>
+                        <p>Windows가 켜질 때 함께 실행되고, 창을 닫아도 화면 오른쪽 아래 트레이에서 계속 동작합니다. 둘 다 옵션에서 끌 수 있어요.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div class="hr"></div>
+    <section class="section" id="install">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>설치 방법</h2>
+                <p>포스기에서 순서대로 따라 하세요. 3분이면 끝나요.</p>
+            </div>
+            <ol class="steps">
+                <li>
+                    <h3>포스기에서 이 페이지 열기</h3>
+                    <p>포스기 인터넷 창 주소창에 아래 주소를 입력하고, 목록에서 <b>앱오더 자동수락</b>을 누르세요.</p>
+                    <p class="tip"><strong data-site-url>https://coffee-manager.github.io/compose-apps</strong></p>
+                </li>
+                <li>
+                    <h3>[설치 파일 받기] 누르기</h3>
+                    <p><b>compose-apporder-setup.exe</b> 파일이 내려받아집니다.</p>
+                    <p class="tip">브라우저가 “자주 다운로드되는 파일이 아닙니다”라고 하면 파일 옆 <kbd>⋯</kbd> → <kbd>유지</kbd>를 누르세요.</p>
+                </li>
+                <li>
+                    <h3>받은 파일 실행</h3>
+                    <p>다운로드 목록이나 ‘다운로드’ 폴더에서 파일을 두 번 누르세요.</p>
+                    <p class="tip">파란 <strong>Windows의 PC 보호</strong> 창이 뜨면 <kbd>추가 정보</kbd> → <kbd>실행</kbd>을 누르세요. 개인이 만든 프로그램이라 인증서가 없어서 나오는 안내예요.</p>
+                </li>
+                <li>
+                    <h3>[다음] → [설치]</h3>
+                    <p>관리자 권한도, Java 설치도 필요 없어요. 기본으로 <b>D:\AppOrder</b>에 설치됩니다. D 드라이브가 없는 포스기는 사용자 폴더에 설치돼요.</p>
+                </li>
+                <li>
+                    <h3>바탕화면의 ‘앱오더 자동수락’ 실행</h3>
+                    <p>초록 테두리 창이 뜨면 끝입니다. 다음부터는 Windows가 켜질 때 알아서 실행돼요.</p>
+                    <p class="tip"><strong>예전 압축파일(zip) 버전을 쓰셨다면</strong> 트레이에서 예전 프로그램을 종료한 뒤 설치하세요. 설정은 그대로 이어지고, 예전 바로가기는 지워도 됩니다. 예전 버전은 자동 업데이트가 안 되니 이번 한 번만 새로 설치해 주세요.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
 
-    <section class="contents">
-        <h2>문제 해결</h2>
-        <h3>1. 프로그램은 정상적으로 실행되었으나<br> 앱오더가 자동수락 안되는 경우</h3>
-        <br>
-        <p>[확인 방법]</p>
-        <p class="sub">
-             <span style="display: block; text-align: left; width: fit-content;  margin: 0 auto;">
-                1. 앱오더 자동수락 실행파일에 우클릭<br>
-                2. '관리자 권한' 으로 실행<br>
-                3. 정상적으로 동작하는지 확인<br>
-             </span>
-            <br>
-            정상적으로 동작하면 '권한' 문제 입니다.
-        </p>
-        <br>
-        <p>[해결 방법]</p>
-        <p class="sub">
-             <span style="display: block; text-align: left; width: fit-content;  margin: 0 auto;">
-                1. 앱오더 자동수락을 항상 '관리자 권한' 으로 실행<br>
-                2. 포스 프로그램을 일반 권한(관리자권한x) 으로 실행<br>
-             </span>
-            <br>
-            위 두가지 중 하나의 방법으로 해결됩니다.<br>
-            <br>
-            2번의 경우, 셀프 설정이 어려우시다면<br>
-            포스뱅크에 문의하여 조치 받을 수 있습니다.
-        </p>
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>사용 방법</h2>
+            </div>
+            <div class="howto">
+                <div>
+                    <h3>멈추기 / 다시 켜기</h3>
+                    <p>창 가운데 버튼을 누릅니다. 초록 테두리는 동작 중, 빨간 테두리는 멈춤이에요.</p>
+                </div>
+                <div>
+                    <h3>설정 바꾸기</h3>
+                    <p>창 위 메뉴의 [옵션]을 눌러 바꾸고 [저장]을 누르세요.</p>
+                </div>
+                <div>
+                    <h3>창이 안 보일 때</h3>
+                    <p>화면 오른쪽 아래 트레이(^)에서 아이콘을 두 번 누르면 창이 다시 열려요. 완전히 끄려면 아이콘을 오른쪽 클릭 → Exit.</p>
+                </div>
+                <div>
+                    <h3>업데이트 확인</h3>
+                    <p>6시간마다 알아서 확인합니다. 바로 확인하려면 메뉴의 [업데이트 확인]을 누르세요.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h3>2. 그외</h3>
-        상단의 '개발자 문의' 통해서 말씀 주세요.
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>문제 해결</h2>
+            </div>
+            <div class="faq">
+                <details>
+                    <summary>프로그램은 켜졌는데 주문이 자동수락되지 않아요</summary>
+                    <div class="answer">
+                        <p>대부분 권한 문제입니다. 먼저 확인해 보세요.</p>
+                        <ol>
+                            <li>바탕화면 ‘앱오더 자동수락’을 오른쪽 클릭</li>
+                            <li>[관리자 권한으로 실행]</li>
+                            <li>이제 수락된다면 권한 문제가 맞아요</li>
+                        </ol>
+                        <p>해결은 둘 중 하나입니다. 앱오더 자동수락을 항상 관리자 권한으로 실행하거나, 포스 프로그램을 일반 권한(관리자 권한 아님)으로 실행하세요. 포스 쪽 설정이 어렵다면 포스뱅크에 문의하면 바꿔 줍니다.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>배민 포장 주문만 수락되지 않아요</summary>
+                    <div class="answer">
+                        <p>작업표시줄이 ‘자동 숨기기’ 상태면 배민 포장 알림을 찾지 못합니다. 작업표시줄을 오른쪽 클릭 → 작업 표시줄 설정에서 ‘자동으로 숨기기’를 끄고 고정해 주세요.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>“이미 실행 중입니다”라고 나와요</summary>
+                    <div class="answer">
+                        <p>이미 트레이에서 동작 중이에요. 화면 오른쪽 아래 트레이(^)에서 아이콘을 두 번 누르면 창이 열립니다.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>포스기가 느려졌어요</summary>
+                    <div class="answer">
+                        <p>[옵션] → 성능 설정에서 인식 간격을 늘려 주세요. 간격이 길수록 포스기 부담이 줄어요.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>그 밖의 문제</summary>
+                    <div class="answer">
+                        <p><a href="https://open.kakao.com/o/s4DLFNYh" target="_blank" rel="noopener noreferrer">개발자 문의</a>로 알려 주세요. 어디까지 했는지, 화면에 무엇이 나오는지 사진과 함께 알려 주시면 더 빨리 도와드릴 수 있어요.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
 
-        <p class="sub">
-            어디까지 진행하셨는지, <br>
-            어떻게 안되시는지 구체적으로 말씀해주실수록<br>
-            더욱 빠른 조치가 가능합니다.
-        </p>
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>다른 프로그램</h2>
+            </div>
+            <div class="others">
+                <a class="btn" href="deposit.html">선결제 관리</a>
+                <a class="btn" href="margin-check.html">마진체크</a>
+                <a class="btn" href="kiosk-auto-start.html">키오스크 자동 영업시작</a>
+            </div>
+        </div>
     </section>
 </main>
-<script src="js/script.js?v=20260331"></script>
+
+<footer class="foot">
+    <div class="wrap">
+        <div>
+            <p>바쁜 매장에서 조금이라도 손을 덜어 드리고 싶어서 만든 무료 프로그램입니다. 주변 점주님께 자유롭게 공유해 주세요.</p>
+            <p>선의로 만든 프로그램이라, 사용하면서 생긴 문제에 대해 개발자가 책임지지 않는 점 양해 부탁드립니다.</p>
+        </div>
+        <nav aria-label="문의">
+            <a href="https://open.kakao.com/o/s4DLFNYh" target="_blank" rel="noopener noreferrer">개발자 문의 (카카오톡 오픈채팅)</a>
+            <a href="donate.html">후원하기</a>
+        </nav>
+    </div>
+</footer>
+<script src="js/site.js?v=20261030"></script>
 </body>
 </html>

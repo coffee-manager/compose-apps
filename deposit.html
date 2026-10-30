@@ -1,151 +1,290 @@
-<!DOCTYPE html>
-<html lang="kr">
+<!doctype html>
+<html lang="ko">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R77B22K4Y5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-R77B22K4Y5');
     </script>
-    <title>선결제 관리</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="css/common.css?v=20260331">
-    <link rel="stylesheet" href="css/contents.css?v=20260331">
+    <title>선결제 관리 · 점주 도구함</title>
+    <meta name="description" content="단골·회사 선결제 잔액을 포스기에서 관리하는 무료 프로그램. 초성·축약어 메뉴 검색, 충전 추가금 자동 계산, 영수증 출력.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+    <link rel="stylesheet" href="css/site.css?v=20261030">
 </head>
 <body>
-<div id="header"></div>
-<main class="container">
-    <section class="intro">
-        <h1>선결제 관리 프로그램</h1>
-        <p class="sub">
-            힘들게 정리하던 종이 장부는 이제 그만!<br>
-        </p>
-        <p class="sub">
-            수백명의 선결제도 한눈에, 쉽게 관리할 수 있어요.
-        </p>
-        <p class="sub">
-            우리 가게만 찾아주는 단골을 더 늘려보세요.
-        </p>
+<header class="top">
+    <div class="wrap">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3v2M12 3v2"/></svg></span>점주 도구함</a>
+        <nav>
+            <a class="nav-programs" href="index.html#programs">프로그램</a>
+            <a href="https://open.kakao.com/o/s4DLFNYh" target="_blank" rel="noopener noreferrer">개발자 문의</a>
+            <a href="donate.html">후원하기</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="wrap crumb"><a href="index.html#programs">← 프로그램 목록</a></div>
+
+    <section class="wrap app-hero">
+        <div>
+            <h1>선결제 관리</h1>
+            <p class="lead">
+                종이 장부는 이제 그만. 단골 손님, 근처 회사, 단체의 선결제 잔액을
+                포스기 한 화면에서 찾고, 충전하고, 결제합니다.
+            </p>
+            <p class="where">포스기(Windows)에 설치 · 무료</p>
+            <figure class="shot" style="margin-top: 36px">
+                <img src="img/deposit/members.png" width="884" height="591" alt="회원 목록. 회원명, 휴대폰 번호, 잔액, 최근이력, 비고가 최근 이용 순으로 보인다">
+                <figcaption>가상의 회원 데이터로 찍은 화면이에요.</figcaption>
+            </figure>
+        </div>
+
+        <aside class="slip" data-release="deposit-" aria-label="설치 파일">
+            <div class="slip-title"><span>최신 버전</span><span>Windows</span></div>
+            <div class="slip-version num" data-r="version">v0.35</div>
+            <hr class="slip-cut">
+            <dl>
+                <dt>올린 날</dt><dd data-r="date">2026.10.30</dd>
+                <dt>파일 크기</dt><dd data-r="size">32MB</dd>
+                <dt>설치 위치</dt><dd>D:\Deposit</dd>
+                <dt>설치할 곳</dt><dd>포스기</dd>
+            </dl>
+            <a class="btn btn-get" href="https://github.com/coffee-manager/deploy/releases/download/deposit-latest/compose-deposit-setup.exe">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+                설치 파일 받기
+            </a>
+            <p class="slip-foot">32bit·64bit 구분 없이 하나로 설치돼요.<br>다음부터는 프로그램이 알아서 업데이트해요.</p>
+        </aside>
     </section>
 
-    <section class="download">
-        <a href="https://github.com/coffee-manager/deploy/releases/download/deposit-v0.33/deposit_32bit.zip" class="btn-download">32bit 다운로드</a>
-        <a href="https://github.com/coffee-manager/deploy/releases/download/deposit-v0.33/deposit_64bit.zip" class="btn-download">64bit 다운로드</a>
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>이런 점이 좋아요</h2>
+            </div>
+            <div class="perks">
+                <div class="perk">
+                    <div>
+                        <h3>회원은 초성 두 글자면 찾아요</h3>
+                        <p>‘김민지’는 <kbd>ㄱㅁ</kbd>, 전화번호는 일부만 쳐도 됩니다. 최근에 온 손님이 위에 있어요.</p>
+                        <p>회사·어린이집처럼 여럿이 쓰는 선결제는 <b>공용 회원</b>으로 만들고, 누가 썼는지 사람별로 남겨요.</p>
+                    </div>
+                    <figure class="shot">
+                        <img src="img/deposit/member-search.png" width="884" height="591" alt="검색창에 ㄱㅁ을 입력하자 김민재, 김민지 두 명만 남은 회원 목록">
+                    </figure>
+                </div>
+
+                <div class="perk">
+                    <div>
+                        <h3>메뉴 찾는 시간이 줄어요</h3>
+                        <p>손님이 부르는 말 그대로 찾습니다. <kbd>아아</kbd>, <kbd>뜨아</kbd> 같은 줄임말, <kbd>ㅂㄴㄹㄹㄸ</kbd> 같은 자음, 한/영을 잘못 눌러 <kbd>dkdk</kbd>로 쳐도 아이스 아메리카노가 나와요.</p>
+                        <p class="note">방향키로 고르고 Enter로 담고, Esc로 검색어를 지워요. 마우스 없이 됩니다.</p>
+                    </div>
+                    <figure class="shot">
+                        <img src="img/deposit/menu-search-jamo.png" width="884" height="591" alt="ㅂㄴㄹㄹㄸ로 검색해 바닐라라떼 메뉴들이 나오고, 오른쪽에 담은 메뉴와 결제 후 잔액이 보이는 화면">
+                        <figcaption>오른쪽 위에 결제 후 잔액이 미리 보여요.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="perk">
+                    <div>
+                        <h3>한/영 실수도 알아서</h3>
+                        <p>한글 자판이 영어로 되어 있어도 고칠 필요 없어요. 쳐 둔 그대로 메뉴를 찾아 줍니다.</p>
+                    </div>
+                    <figure class="shot">
+                        <img src="img/deposit/menu-search-eng.png" width="884" height="591" alt="검색창에 dkdk를 입력하자 ICE 아메리카노가 맨 위에 나온 화면">
+                    </figure>
+                </div>
+
+                <div class="perk">
+                    <div>
+                        <h3>거래 내역이 한눈에</h3>
+                        <p>충전과 결제, 그때그때 잔액, 무엇을 마셨는지까지 남아요. 거래내역·영수증·주문서를 영수증 프린터로 출력할 수 있어요.</p>
+                        <p class="note">실수로 지운 거래는 [삭제 복구]로 되돌립니다.</p>
+                    </div>
+                    <figure class="shot">
+                        <img src="img/deposit/transaction.png" width="884" height="591" alt="거래내역 화면. 왼쪽에 일시, 종류, 금액, 개수, 잔액 목록, 오른쪽에 선택한 거래의 주문 상세">
+                    </figure>
+                </div>
+
+                <div class="perk">
+                    <div>
+                        <h3>충전 추가금은 자동 계산</h3>
+                        <p>금액을 치면 <b>‘10만’</b>처럼 한글로 다시 보여 줘서 0을 하나 더 치는 실수를 막아요. 현금·카드에 따라 추가 적립을 계산해 최종 충전액을 보여 줍니다.</p>
+                        <p class="note">추가 비율과 적용 기준 금액은 옵션에서 정해요. 출금은 앞에 - 를 붙여 입력합니다.</p>
+                    </div>
+                    <figure class="shot shot-small">
+                        <img src="img/deposit/deposit-dialog.png" width="304" height="289" alt="입/출금 창. 100,000원 입력, 입금 10만, 현금 +10% 선택, 최종 충전 110,000원">
+                    </figure>
+                </div>
+            </div>
+        </div>
     </section>
-    <p id="desktop-bit-msg" class="sub" style="margin-bottom: 5px; color: orangered"></p>
-    <p class="sub" style="margin-bottom: 40px">
-        (포스기에 다운로드 및 설치)
-    </p>
 
-    <div class="hr"></div>
-
-    <section class="contents">
-        <h2>홍보 예시</h2>
-        <img src="img/deposit/promotional_material.png" style="max-width: 100%; margin: 0;" alt="선결제 홍보물">
-        <p class="sub">우리 매장만의 고객을 만들어보세요.</p>
-        <span class="sub" style="display: block; text-align: left; width: fit-content;  margin: 0 auto;">
-        1) 주변 회사 법인카드<br>
-        2) 단골 손님<br>
-        3) 지인 혹은 단체에 이용권 선물<br>
-        </span>
-        <p class="sub">등으로 이용하시는 경우가 많습니다.</p>
-        <br>
-        <a href="img/deposit/promotional_material_download.png" download="컴포즈_선결제_홍보물.png">선결제 홍보물 다운로드</a>
-        <p class="sub">위 홍보물은 각 매장 상황에 맞게 자유롭게 수정 및 사용 하셔도 됩니다.</p>
-        <br>
-        <p class="sub">Made By 컴포즈커피 강북번동점 점주님</p>
+    <section class="section" id="install">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>설치 방법</h2>
+                <p>포스기에서 순서대로 따라 하세요.</p>
+            </div>
+            <ol class="steps">
+                <li>
+                    <h3>포스기에서 이 페이지 열기</h3>
+                    <p>포스기 인터넷 창 주소창에 아래 주소를 입력하고, 목록에서 <b>선결제 관리</b>를 누르세요.</p>
+                    <p class="tip"><strong data-site-url>https://coffee-manager.github.io/compose-apps</strong></p>
+                </li>
+                <li>
+                    <h3>[설치 파일 받기] 누르기</h3>
+                    <p><b>compose-deposit-setup.exe</b> 파일이 내려받아집니다.</p>
+                    <p class="tip">브라우저가 “자주 다운로드되는 파일이 아닙니다”라고 하면 파일 옆 <kbd>⋯</kbd> → <kbd>유지</kbd>를 누르세요.</p>
+                </li>
+                <li>
+                    <h3>받은 파일 실행</h3>
+                    <p>다운로드 목록이나 ‘다운로드’ 폴더에서 파일을 두 번 누르세요.</p>
+                    <p class="tip">파란 <strong>Windows의 PC 보호</strong> 창이 뜨면 <kbd>추가 정보</kbd> → <kbd>실행</kbd>을 누르세요. 개인이 만든 프로그램이라 인증서가 없어서 나오는 안내예요.</p>
+                </li>
+                <li>
+                    <h3>[다음] → [설치]</h3>
+                    <p>관리자 권한도, Java 설치도 필요 없어요. 기본으로 <b>D:\Deposit</b>에 설치됩니다.</p>
+                </li>
+                <li>
+                    <h3>처음 실행할 때 매장명 입력</h3>
+                    <p>영수증과 주문서에 찍힐 이름이에요. 나중에 옵션에서 바꿀 수 있어요.</p>
+                    <p class="tip"><strong>예전 압축파일(zip) 버전을 쓰셨다면</strong> 예전 프로그램을 끄고 설치하세요. 회원과 거래 기록은 그대로 이어집니다. 예전 버전은 자동 업데이트가 안 되니 이번 한 번만 새로 설치해 주세요.</p>
+                </li>
+            </ol>
+        </div>
     </section>
 
-    <div class="hr"></div>
-
-    <section class="contents">
-        <h2>설치 방법</h2>
-        <ol>
-            <li>프로그램 다운로드<br>
-                <p class="sub">대부분 32bit 버전 다운로드<br>신규매장 64bit 버전 다운로드</p>
-                <p class="sub">Tip: 내컴퓨터(내PC)➝ 우클릭➝ 속성➝ 시스템 종류➝ 32/64 확인</p>
-                <p class="sub">Tip: 두 버전 모두 다운 후 시도해보셔도 됩니다.</p>
-            </li>
-            <li>압축 해제<br>
-                <p class="sub">- 파일에 우클릭 ➝ 압축 풀기 선택</p>
-                <p class="sub">- 파일을 길게 터치하면 우클릭이 됩니다.</p>
-                <p class="sub">- 혹은 파일 더블 클릭 후 압축풀기 클릭</p>
-                <p style="font-size: 10px; margin: 0">▼(아래 이미지 참조)</p>
-                <img src="img/unzip.png" style="max-width: 200px; margin: 0" alt="압축 풀기">
-            </li>
-            <li><strong>setup</strong> 파일 더블클릭
-                <img class="img-center" src="img/apporder-auto-accept/setup.png" style="max-width: 300px; margin-top: 10px" alt="설치 완료 화면">
-                <p class="sub">▲ 위 이미지 처럼 나온다면 정상 설치 완료</p>
-            </li>
-        </ol>
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>사용 방법</h2>
+            </div>
+            <div class="howto">
+                <div>
+                    <h3>회원 등록</h3>
+                    <p>회원 목록에서 [신규 등록]. 이름과 전화번호, 메모를 넣어요. 여럿이 쓰는 회사라면 사용자 이름을 같이 적어 공용 회원으로 만드세요.</p>
+                    <figure class="shot">
+                        <img src="img/deposit/member-add.png" width="884" height="591" alt="회원 신규 등록 화면">
+                    </figure>
+                </div>
+                <div>
+                    <h3>충전 → 결제</h3>
+                    <p>회원을 누르면 거래내역이 열립니다. [입금]으로 충전하고, [음료 선택]에서 메뉴를 담아 [결제 저장]을 누르면 잔액에서 빠져요.</p>
+                    <figure class="shot">
+                        <img src="img/deposit/transaction.png" width="884" height="591" alt="거래내역 화면 아래쪽에 입금, 음료 선택 버튼">
+                    </figure>
+                </div>
+                <div>
+                    <h3>프린터 연결</h3>
+                    <p>[옵션] → 프린터에서 영수증 프린터를 고르세요. 결제할 때 주문서·영수증을 자동으로 뽑게 할 수도 있어요.</p>
+                </div>
+                <div>
+                    <h3>백업</h3>
+                    <p>프로그램을 끌 때 [백업 후 종료]를 고르거나 옵션의 [백업]을 누르면 백업 파일을 저장해요(기본 위치는 바탕화면). 포스기를 바꿀 때 옵션의 [복원]으로 그대로 옮깁니다.</p>
+                </div>
+                <div class="wide">
+                    <figure class="shot">
+                        <img src="img/deposit/option.png" width="884" height="591" alt="옵션 화면. 매장명, Windows 시작 시 자동 실행, 선결제 현금·카드 추가 비율">
+                        <figcaption>옵션 화면. 아래로 내리면 프린터와 백업 설정이 있어요.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div class="hr"></div>
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>홍보물</h2>
+                <p>선결제는 단골을 만드는 좋은 방법이에요. 근처 회사 법인카드, 단골 손님, 지인·단체 선물용으로 많이 씁니다.</p>
+            </div>
+            <div class="perk">
+                <div>
+                    <p>매장 상황에 맞게 자유롭게 고쳐서 쓰셔도 됩니다.</p>
+                    <p><a class="btn" href="img/deposit/promo-print.png" download="선결제_홍보물.png">홍보물 내려받기</a></p>
+                    <p class="note">만든 분: 컴포즈커피 강북번동점 점주님</p>
+                </div>
+                <figure class="shot shot-small">
+                    <img src="img/deposit/promo.png" width="1414" height="2000" alt="선결제 안내 홍보물 예시">
+                </figure>
+            </div>
+        </div>
+    </section>
 
-    <section class="contents">
-        <h2>사용 방법</h2>
-        <p class="sub">
-            간략한 특징 및 기능 소개
-        </p>
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>자주 묻는 질문</h2>
+            </div>
+            <div class="faq">
+                <details>
+                    <summary>회원 기록은 어디에 저장되나요?</summary>
+                    <div class="answer">
+                        <p>이 포스기 안(사용자 폴더의 compose\deposit\data)에만 저장돼요. 인터넷으로 보내지 않습니다. 포스기 고장에 대비해 가끔 [백업 후 종료]로 백업해 두세요.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>새 버전으로 업데이트하면 기록이 지워지나요?</summary>
+                    <div class="answer">
+                        <p>아니요. 프로그램만 바뀌고 회원·거래 기록과 설정은 그대로예요.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>영수증이 출력되지 않아요</summary>
+                    <div class="answer">
+                        <p>[옵션] → 프린터에서 영수증 프린터를 다시 골라 저장해 보세요. 그래도 안 되면 프린터 이름과 화면 사진을 개발자 문의로 보내 주세요.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>잘못 저장한 결제를 지우고 싶어요</summary>
+                    <div class="answer">
+                        <p>거래내역에서 해당 줄을 고르고 [거래내역 삭제]. 다시 살리려면 [삭제 복구]를 누르세요.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>그 밖의 문제</summary>
+                    <div class="answer">
+                        <p><a href="https://open.kakao.com/o/s4DLFNYh" target="_blank" rel="noopener noreferrer">개발자 문의</a>로 알려 주세요. 화면 사진을 같이 보내 주시면 더 빨리 도와드릴 수 있어요.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
 
-
-        <h3>1. 프린터 설정(필수)</h3>
-        <img src="img/deposit/option.png" style="max-width: 100%; margin: 0;" alt="선결제 옵션">
-        <p class="sub">
-            프린터가 정상적으로 설정되면<br>
-            메뉴 선택 후 결제시 프린터에서 주문서가 출력됩니다.<br>
-            (포스기 결제와 비슷)<br>
-            <br>
-            그외 <br>
-            <span style="display: block; text-align: left; width: fit-content;  margin: 0 auto;">
-                1) 이전 거래내역 출력<br>
-                2) 영수증 출력<br>
-                3) 주문서 재출력<br>
-                <br>
-            </span>
-        </p>
-
-
-        <h3>2. 음료 검색 기능</h3>
-        <p class="sub">
-            메뉴 찾는 시간 낭비는 이제 그만!<br>
-            아주 쉽고 빠른 검색 기능 제공<br>
-            <br>
-            축약어, 카테고리, 자음, 키워드 검색 등을 지원<br>
-            한/영 실수 등을 보조
-        </p>
-        <img src="img/deposit/search1.png" style="max-width: 300px; margin: 30px auto 0 auto;" alt="검색1">
-        <p class="sub" style="margin: 0">- 간편 검색</p>
-        <img src="img/deposit/search2.png" style="max-width: 300px; margin: 30px auto 0 auto;" alt="검색2">
-        <p class="sub" style="margin: 0">- 한/영 실수 보조</p>
-        <img src="img/deposit/search3.png" style="max-width: 300px; margin: 30px auto 0 auto;" alt="검색3">
-        <p class="sub" style="margin: 0">- 자음 검색</p>
-        <p class="sub">
-            <br>
-        </p>
-
-        <h3>3. 입금/출금</h3>
-        <img src="img/deposit/add.png" style="max-width: 300px; margin: 30px auto 0 auto;" alt="검색1">
-        <p class="sub">
-             <span style="display: block; text-align: left; width: fit-content;  margin: 0 auto;">
-                 1) 입금 실수를 줄이기 위한 한글 표기<br>
-                 2) 현금 / 카드 결제에 따른 추가금 자동 계산(옵션에서 변경 가능)<br>
-                 3) 음수 입력시 결제 금액 차감 가능<br>
-                <br>
-            </span>
-        </p>
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>다른 프로그램</h2>
+            </div>
+            <div class="others">
+                <a class="btn" href="apporder-auto-accept.html">앱오더 자동수락</a>
+                <a class="btn" href="margin-check.html">마진체크</a>
+                <a class="btn" href="kiosk-auto-start.html">키오스크 자동 영업시작</a>
+            </div>
+        </div>
     </section>
 </main>
-<script src="js/script.js?v=20260331"></script>
+
+<footer class="foot">
+    <div class="wrap">
+        <div>
+            <p>바쁜 매장에서 조금이라도 손을 덜어 드리고 싶어서 만든 무료 프로그램입니다. 주변 점주님께 자유롭게 공유해 주세요.</p>
+            <p>선의로 만든 프로그램이라, 사용하면서 생긴 문제에 대해 개발자가 책임지지 않는 점 양해 부탁드립니다.</p>
+        </div>
+        <nav aria-label="문의">
+            <a href="https://open.kakao.com/o/s4DLFNYh" target="_blank" rel="noopener noreferrer">개발자 문의 (카카오톡 오픈채팅)</a>
+            <a href="donate.html">후원하기</a>
+        </nav>
+    </div>
+</footer>
+<script src="js/site.js?v=20261030"></script>
 </body>
 </html>

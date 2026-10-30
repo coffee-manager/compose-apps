@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="kr">
+<!doctype html>
+<html lang="ko">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R77B22K4Y5"></script>
@@ -7,107 +7,176 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-R77B22K4Y5');
     </script>
-    <title>키오스크 자동실행</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="css/common.css?v=20260331">
-    <link rel="stylesheet" href="css/contents.css?v=20260331">
+    <title>키오스크 자동 영업시작 · 점주 도구함</title>
+    <meta name="description" content="키오스크 전원만 켜면 비밀번호 입력과 영업시작을 대신 해 주는 무료 프로그램.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+    <link rel="stylesheet" href="css/site.css?v=20261030">
 </head>
 <body>
-<div id="header"></div>
-<main class="container">
-    <section class="intro">
-        <h1>키오스크 자동실행 프로그램</h1>
-        <p class="sub">
-            전원만 키면 자동으로 비번 입력 및 영업시작까지!<br>
-        </p>
-        <p class="sub">
-            오픈 친구들 시간을 절약할 수 있어요.
-        </p>
+<header class="top">
+    <div class="wrap">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3v2M12 3v2"/></svg></span>점주 도구함</a>
+        <nav>
+            <a class="nav-programs" href="index.html#programs">프로그램</a>
+            <a href="https://open.kakao.com/o/s4DLFNYh" target="_blank" rel="noopener noreferrer">개발자 문의</a>
+            <a href="donate.html">후원하기</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="wrap crumb"><a href="index.html#programs">← 프로그램 목록</a></div>
+
+    <section class="wrap app-hero">
+        <div>
+            <h1>키오스크 자동 영업시작</h1>
+            <p class="lead">
+                아침에 키오스크 전원만 켜 두세요. 비밀번호 입력부터 영업시작 버튼까지 대신 누릅니다.
+                오픈하는 직원이 다른 준비에 집중할 수 있어요.
+            </p>
+            <p class="where">키오스크(Windows)에 설치 · 무료</p>
+        </div>
+
+        <aside class="slip" data-release="kiosk-" aria-label="설치 파일">
+            <div class="slip-title"><span>최신 버전</span><span>Windows</span></div>
+            <div class="slip-version num" data-r="version">v1.3</div>
+            <hr class="slip-cut">
+            <dl>
+                <dt>올린 날</dt><dd data-r="date">2026.10.30</dd>
+                <dt>파일 크기</dt><dd data-r="size">28MB</dd>
+                <dt>설치 위치</dt><dd>D:\KioskAutoRun</dd>
+                <dt>설치할 곳</dt><dd>키오스크</dd>
+            </dl>
+            <a class="btn btn-get" href="https://github.com/coffee-manager/deploy/releases/download/kiosk-latest/compose-kiosk-setup.exe">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+                설치 파일 받기
+            </a>
+            <p class="slip-foot">자동 업데이트는 없어요.<br>새 버전은 이 페이지에서 다시 받아 설치하면 덮어써져요.</p>
+        </aside>
     </section>
 
-    <section class="download">
-        <a href="https://github.com/coffee-manager/deploy/releases/download/kiosk-v1.2/kiosk_32bit.zip" class="btn-download">32bit 다운로드</a>
-        <a href="https://github.com/coffee-manager/deploy/releases/download/kiosk-v1.2/kiosk_64bit.zip" class="btn-download">64bit 다운로드</a>
-    </section>
-    <p id="desktop-bit-msg" class="sub" style="margin-bottom: 5px; color: orangered"></p>
-    <p class="sub" style="margin-bottom: 40px">
-        (키오스크에 다운로드 및 설치)
-    </p>
-    <div class="hr"></div>
-
-    <section class="contents">
-        <h2>설치 방법</h2>
-        <ol>
-            <li>
-                가상키보드 열기
-                <img src="img/kiosk-auto-start/keyboard1.png" style="max-width: 300px; margin-top: 10px" alt="가상키보드1">
-                <img src="img/kiosk-auto-start/keyboard2.png" style="max-width: 300px; margin-top: 10px" alt="가상키보드2">
-
-                <p class="sub"> 이 키보드 이용하여 브라우저에</p>
-                <p class="sub" style="cursor:pointer; color:blue; text-decoration:underline;" id="currentUrl"></p>
-                <p class="sub" >▲ 위 URL 입력</p>
-            </li>
-            <li>프로그램 다운로드<br>
-                <p class="sub">대부분 32bit 버전 다운로드<br>신규매장 64bit 버전 다운로드</p>
-                <p class="sub">Tip: 내컴퓨터(내PC)➝ 우클릭➝ 속성➝ 시스템 종류➝ 32/64 확인</p>
-                <p class="sub">Tip: 두 버전 모두 다운 후 시도해보셔도 됩니다.</p>
-            </li>
-            <li>압축 해제<br>
-                <p class="sub">- 파일에 우클릭 ➝ 압축 풀기 선택</p>
-                <p class="sub">- 파일을 길게 터치하면 우클릭이 됩니다.</p>
-                <p class="sub">- 혹은 파일 더블 클릭 후 압축풀기 클릭</p>
-                <p style="font-size: 10px; margin: 0">▼(아래 이미지 참조)</p>
-                <img src="img/unzip.png" style="max-width: 200px; margin: 0" alt="압축 풀기">
-            </li>
-            <li><strong>setup</strong> 파일 더블클릭
-                <img src="img/kiosk-auto-start/setup.png" style="max-width: 300px; margin-top: 10px" alt="설치 완료 화면">
-                <p class="sub">▲ 위 이미지 처럼 나온다면 정상 설치 완료</p>
-            </li>
-        </ol>
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>전원을 켜면 이렇게 움직여요</h2>
+                <p>화면은 따로 없어요. 뒤에서 조용히 동작하고, 할 일을 마치면 스스로 꺼집니다.</p>
+            </div>
+            <ol class="flow">
+                <li><b>전원 켜기</b><span>Windows가 켜지면 프로그램도 자동 실행</span></li>
+                <li><b>비밀번호 화면 확인</b><span>키오스크 비밀번호 화면이 뜰 때까지 기다려요</span></li>
+                <li><b>비밀번호 입력</b><span>9999를 눌러 들어가요</span></li>
+                <li><b>영업시작 두 번</b><span>영업시작 확인까지 차례로 눌러요</span></li>
+                <li><b>스스로 종료</b><span>끝나면 꺼져서 키오스크에 부담이 없어요</span></li>
+            </ol>
+        </div>
     </section>
 
-    <div class="hr"></div>
+    <section class="section" id="install">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>설치 방법</h2>
+                <p>키오스크에서 직접 설치합니다. 키보드가 없으니 화상 키보드를 씁니다.</p>
+            </div>
+            <ol class="steps">
+                <li>
+                    <h3>화상 키보드 열기</h3>
+                    <p>키오스크 화면 아래 작업표시줄에서 키보드 아이콘을 누르세요.</p>
+                    <figure class="shot shot-small">
+                        <img src="img/kiosk/keyboard1.png" width="394" height="354" alt="작업표시줄의 화상 키보드 아이콘">
+                    </figure>
+                    <figure class="shot">
+                        <img src="img/kiosk/keyboard2.png" width="1187" height="762" alt="화면 아래에 열린 화상 키보드">
+                    </figure>
+                </li>
+                <li>
+                    <h3>인터넷 창에 주소 입력</h3>
+                    <p>인터넷 창을 열고 아래 주소를 입력한 뒤, 목록에서 <b>키오스크 자동 영업시작</b>을 누르세요.</p>
+                    <p class="tip"><strong data-site-url>https://coffee-manager.github.io/compose-apps</strong></p>
+                </li>
+                <li>
+                    <h3>[설치 파일 받기] → 받은 파일 실행</h3>
+                    <p><b>compose-kiosk-setup.exe</b>를 받아 실행하세요.</p>
+                    <p class="tip">파란 <strong>Windows의 PC 보호</strong> 창이 뜨면 <kbd>추가 정보</kbd> → <kbd>실행</kbd>을 누르세요. 개인이 만든 프로그램이라 인증서가 없어서 나오는 안내예요.</p>
+                </li>
+                <li>
+                    <h3>[다음] → [설치]</h3>
+                    <p>관리자 권한도, Java 설치도 필요 없어요. ‘지금 실행’은 체크하지 않아도 됩니다. 다음에 전원을 켤 때부터 동작해요.</p>
+                </li>
+                <li>
+                    <h3>키오스크 비밀번호를 9999로</h3>
+                    <p>프로그램이 9999를 누르도록 만들어져 있어요. 다른 비밀번호를 쓰고 있다면 키오스크 설정에서 <b>9999</b>로 바꿔 주세요.</p>
+                </li>
+                <li>
+                    <h3>재부팅해서 확인</h3>
+                    <p>키오스크를 다시 켜고 손대지 않고 기다려 보세요. 영업시작 화면까지 넘어가면 끝입니다.</p>
+                    <p class="tip"><strong>예전 압축파일(zip) 버전을 쓰셨다면</strong> 새 설치 파일로 한 번 설치해 주세요. 예전 바로가기는 지워도 됩니다.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
 
-    <section class="contents">
-        <h2>사용 방법</h2>
-        <p class="sub">
-            설치 완료 후 재부팅 하셔서 자동으로 실행되는지 확인!<br>
-        </p>
-        <p class="sub">
-            키오스크 비밀번호는 꼭 <strong>'9999'</strong> 로 설정해주세요<br>
-        </p>
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>자주 묻는 질문</h2>
+            </div>
+            <div class="faq">
+                <details>
+                    <summary>전원을 켰는데 비밀번호 화면에서 멈춰 있어요</summary>
+                    <div class="answer">
+                        <ol>
+                            <li>키오스크 비밀번호가 9999인지 확인하세요.</li>
+                            <li>설치 뒤 한 번은 재부팅해야 자동 실행이 시작돼요.</li>
+                            <li>화면 크기가 다른 키오스크 모델은 버튼 위치가 달라 안 될 수 있어요. 키오스크 화면 사진과 함께 개발자 문의로 알려 주세요.</li>
+                        </ol>
+                    </div>
+                </details>
+                <details>
+                    <summary>계속 켜져 있어서 키오스크가 느려지지 않나요?</summary>
+                    <div class="answer">
+                        <p>아니요. 영업시작을 마치거나 비밀번호 화면이 10분 동안 보이지 않으면 스스로 꺼집니다. 아무리 길어도 켜진 뒤 30분이면 종료돼요.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>그만 쓰고 싶어요</summary>
+                    <div class="answer">
+                        <p>Windows 설정 → 앱 → 설치된 앱에서 ‘키오스크 자동 영업시작’을 제거하세요. 자동 실행 등록도 함께 지워집니다.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>다른 프로그램</h2>
+            </div>
+            <div class="others">
+                <a class="btn" href="apporder-auto-accept.html">앱오더 자동수락</a>
+                <a class="btn" href="deposit.html">선결제 관리</a>
+                <a class="btn" href="margin-check.html">마진체크</a>
+            </div>
+        </div>
     </section>
 </main>
 
-<script src="js/script.js?v=20260331"></script>
-<script>
-    /**
-     * 현재 페이지 URL을 화면에 출력
-     */
-    function getParentUrl() {
-        const url = new URL(location.href);
-        const paths = url.pathname.split('/').filter(Boolean);
-        paths.pop(); // 현재 단계 제거
-        return url.origin + '/' + (paths.length ? paths.join('/') + '/' : '');
-    }
-
-    /**
-     * 부모 주소 표시 + 클릭 시 이동
-     */
-    function initParentLink() {
-        const el = document.getElementById('currentUrl');
-        const parentUrl = getParentUrl();
-        el.textContent = parentUrl;
-        el.onclick = () => location.href = parentUrl;
-    }
-    initParentLink();
-    document.getElementById('currentUrl').textContent = getParentUrl();
-</script>
+<footer class="foot">
+    <div class="wrap">
+        <div>
+            <p>바쁜 매장에서 조금이라도 손을 덜어 드리고 싶어서 만든 무료 프로그램입니다. 주변 점주님께 자유롭게 공유해 주세요.</p>
+            <p>선의로 만든 프로그램이라, 사용하면서 생긴 문제에 대해 개발자가 책임지지 않는 점 양해 부탁드립니다.</p>
+        </div>
+        <nav aria-label="문의">
+            <a href="https://open.kakao.com/o/s4DLFNYh" target="_blank" rel="noopener noreferrer">개발자 문의 (카카오톡 오픈채팅)</a>
+            <a href="donate.html">후원하기</a>
+        </nav>
+    </div>
+</footer>
+<script src="js/site.js?v=20261030"></script>
 </body>
 </html>

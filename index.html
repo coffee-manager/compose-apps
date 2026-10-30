@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="kr">
+<html lang="ko">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R77B22K4Y5"></script>
@@ -7,64 +7,126 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-R77B22K4Y5');
     </script>
-    <title>컴포즈 보조 프로그램</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="css/common.css?v=20260331">
-    <link rel="stylesheet" href="css/contents.css?v=20260331">
-    <link rel="stylesheet" href="css/index.css?v=20260331">
+    <title>점주 도구함 · 컴포즈 매장용 무료 프로그램</title>
+    <meta name="description" content="컴포즈커피 점주가 직접 만든 무료 매장 프로그램. 앱오더 자동수락, 선결제 관리, 키오스크 자동 영업시작, 배달 정산 분석(마진체크).">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+    <link rel="stylesheet" href="css/site.css?v=20261030">
 </head>
 <body>
-<div id="header"></div>
+<header class="top">
+    <div class="wrap">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3v2M12 3v2"/></svg></span>점주 도구함</a>
+        <nav>
+            <a class="nav-programs" href="index.html#programs" aria-current="page">프로그램</a>
+            <a href="https://open.kakao.com/o/s4DLFNYh" target="_blank" rel="noopener noreferrer">개발자 문의</a>
+            <a href="donate.html">후원하기</a>
+        </nav>
+    </div>
+</header>
+
 <main>
-    <section style="margin: auto; max-width: 700px; padding: 32px 24px;">
-    <ul class="download-list">
-        <li>
-            <a href="deposit.html?v=20260331">
-                <button>선결제 관리 Download</button>
-            </a>
-        </li>
-        <li>
-            <a href="apporder-auto-accept.html?v=20260331">
-                <button>앱오더 자동수락 Download</button>
-            </a>
-        </li>
-        <li>
-            <a href="kiosk-auto-start.html?v=20260331">
-                <button>키오스크 자동실행 Download</button>
-            </a>
-        </li>
-    </ul>
-    </section>
-    <section class="container">
-        <p style="font-size: 16px">
-            항상 바쁜 현장에서 고생하시는 점주님들께<br>
-            조금이나마 도움이 되었으면 하는 마음으로 만든<br>
-            무료 프로그램입니다.<br>
-            <br>
-            자유롭게 사용하시고,<br>
-            필요하시다면 주변에 공유하셔도 괜찮습니다.<br>
-            <br>
-            다만 선의의 목적으로 제작된 프로그램인 만큼,<br>
-            프로그램 사용으로 인해 발생하는<br>
-            어떠한 문제에 대해서도<br>
-            개발자는 책임을 지지 않는 점<br>
-            양해 부탁드립니다.<br>
-            <br>
-            사용 중 불편한 점이나<br>
-            개선 아이디어, 버그 제보, 질문 등이 있으시다면<br>
-            상단의 <strong>‘개발자 문의’</strong>를 통해<br>
-            편하게 연락 주세요.<br>
-            <br>
-            사용해주셔서 감사합니다 😊<br>
+    <section class="home-hero wrap">
+        <h1>앱오더 누르러 뛰어가지 마세요.</h1>
+        <p class="lead">
+            컴포즈커피를 운영하는 점주가 매장에서 직접 쓰려고 만든 프로그램입니다.
+            포스기나 키오스크에 한 번 설치하면, 손이 가던 일을 대신 해 줍니다. 모두 무료예요.
         </p>
     </section>
+
+    <ul class="tools wrap" id="programs">
+        <li class="tool">
+            <div>
+                <span class="tool-where">포스기에 설치</span>
+                <h2><a href="apporder-auto-accept.html">앱오더 자동수락</a></h2>
+                <p>앱오더·배민 포장 주문이 들어오면 알아서 수락합니다.</p>
+                <ul>
+                    <li>주문 알림이 울릴 때마다 포스기로 뛰어갈 필요가 없어요</li>
+                    <li>영업시간, 제조 시간, 자동 포장 완료 개수까지 매장에 맞게</li>
+                    <li>새 버전이 나오면 프로그램이 알려 주고 버튼 한 번에 업데이트</li>
+                </ul>
+                <div class="actions">
+                    <a class="btn" href="apporder-auto-accept.html">설치·사용 방법 보기</a>
+                </div>
+            </div>
+            <figure class="shot">
+                <img src="img/apporder/option.png" width="784" height="591" alt="앱오더 자동수락 옵션 창. 성능, 자동수락, 제조 시간, 영업 시간, 자동 포장 완료 설정이 보인다">
+            </figure>
+        </li>
+
+        <li class="tool">
+            <div>
+                <span class="tool-where">포스기에 설치</span>
+                <h2><a href="deposit.html">선결제 관리</a></h2>
+                <p>종이 장부 대신, 단골과 회사 선결제 잔액을 한 화면에서 관리합니다.</p>
+                <ul>
+                    <li>회원 이름 초성이나 전화번호 일부로 바로 찾기</li>
+                    <li>‘아아’, ‘ㅂㄴㄹㄹㄸ’, 한/영 잘못 친 ‘dkdk’도 메뉴를 찾아요</li>
+                    <li>현금·카드 충전 시 추가금 자동 계산, 영수증·주문서 출력</li>
+                </ul>
+                <div class="actions">
+                    <a class="btn" href="deposit.html">설치·사용 방법 보기</a>
+                </div>
+            </div>
+            <figure class="shot">
+                <img src="img/deposit/members.png" width="884" height="591" alt="선결제 관리 회원 목록. 회원명, 휴대폰 번호, 잔액, 최근이력, 비고가 표로 보인다">
+            </figure>
+        </li>
+
+        <li class="tool">
+            <div>
+                <span class="tool-where">웹사이트 · 설치 없음</span>
+                <h2><a href="margin-check.html">마진체크</a></h2>
+                <p>배민·쿠팡이츠·요기요·땡겨요 정산 엑셀을 올리면 실제로 얼마 남았는지 보여 줍니다.</p>
+                <ul>
+                    <li>매출, 수수료, 배달비, 광고비를 빼고 남은 순이익까지 한 번에</li>
+                    <li>파일은 서버로 보내지 않아요. 내 브라우저 안에서만 계산</li>
+                    <li>파일이 없어도 월 매출만 넣는 순이익 계산기로 요금제 비교</li>
+                </ul>
+                <div class="actions">
+                    <a class="btn" href="margin-check.html">자세히 보기</a>
+                </div>
+            </div>
+            <figure class="shot">
+                <img src="img/margincheck/profit.png" width="1920" height="1290" alt="마진체크 순이익 화면. 매출에서 수수료, 배달비, 재료비, 인건비를 빼 순이익까지 내려가는 막대 그래프">
+            </figure>
+        </li>
+
+        <li class="tool">
+            <div>
+                <span class="tool-where">키오스크에 설치</span>
+                <h2><a href="kiosk-auto-start.html">키오스크 자동 영업시작</a></h2>
+                <p>키오스크 전원만 켜면 비밀번호 입력과 영업시작 버튼을 대신 누릅니다.</p>
+                <ul>
+                    <li>오픈 준비 시간을 아껴요</li>
+                    <li>영업시작이 끝나면 스스로 꺼져서 키오스크에 부담이 없어요</li>
+                </ul>
+                <div class="actions">
+                    <a class="btn" href="kiosk-auto-start.html">설치 방법 보기</a>
+                </div>
+            </div>
+            <figure class="shot">
+                <img src="img/kiosk/keyboard2.png" width="1187" height="762" alt="키오스크 화상 키보드 화면">
+            </figure>
+        </li>
+    </ul>
 </main>
-<script src="js/script.js?v=20260331"></script>
+
+<footer class="foot">
+    <div class="wrap">
+        <div>
+            <p>바쁜 매장에서 조금이라도 손을 덜어 드리고 싶어서 만든 무료 프로그램입니다. 주변 점주님께 자유롭게 공유해 주세요.</p>
+            <p>선의로 만든 프로그램이라, 사용하면서 생긴 문제에 대해 개발자가 책임지지 않는 점 양해 부탁드립니다.</p>
+        </div>
+        <nav aria-label="문의">
+            <a href="https://open.kakao.com/o/s4DLFNYh" target="_blank" rel="noopener noreferrer">개발자 문의 (카카오톡 오픈채팅)</a>
+            <a href="donate.html">후원하기</a>
+        </nav>
+    </div>
+</footer>
+<script src="js/site.js?v=20261030"></script>
 </body>
 </html>
