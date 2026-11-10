@@ -385,7 +385,7 @@ kbd {
 .letter p { color: var(--ink-2); font-size: 18px; margin: 0 0 18px; }
 
 .account {
-    margin: 36px 0 12px; padding: 22px; border-radius: var(--radius); background: var(--card); box-shadow: var(--shot-shadow); max-width: 420px;
+    margin: 36px 0 12px; padding: 22px; border-radius: var(--radius); background: var(--card); box-shadow: var(--shot-shadow); max-width: 480px;
 }
 
 .account .acct-num { font-size: 26px; font-weight: 800; letter-spacing: -.01em; }
@@ -397,6 +397,14 @@ kbd {
 .btn-naver { background: #03c75a; border-color: #03c75a; color: #fff; }
 
 .btn-naver:hover { background: #02b351; }
+
+.btn-toss { background: #0064ff; border-color: #0064ff; color: #fff; }
+
+.btn-toss:hover { background: #0057de; }
+
+.btn-kakao { background: #fee500; border-color: #fee500; color: #191919; }
+
+.btn-kakao:hover { background: #f5dc00; }
 
 .toast {
     position: fixed; left: 50%; bottom: 32px; transform: translate(-50%, 20px);

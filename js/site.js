@@ -113,6 +113,27 @@ function bindCopy() {
 }
 
 /**
+ * data-mobile-only 링크: 앱 주소(supertoss:// 등)라 PC 에서는 열리지 않는다. 대신 안내하고 값을 복사해 둔다.
+ */
+function bindMobileOnly() {
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+        return;
+    }
+    document.querySelectorAll('[data-mobile-only]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const done = () => showToast(a.dataset.mobileOnly);
+            if (a.dataset.mobileCopy && navigator.clipboard) {
+                navigator.clipboard.writeText(a.dataset.mobileCopy).then(done, done);
+            } else {
+                done();
+            }
+        });
+    });
+}
+
+/**
  * data-site-url: 이 사이트 첫 화면 주소 (키오스크 브라우저에 입력할 주소)
  */
 function showSiteUrl() {
@@ -123,3 +144,4 @@ function showSiteUrl() {
 fillSlips();
 bindCopy();
 showSiteUrl();
+bindMobileOnly();
