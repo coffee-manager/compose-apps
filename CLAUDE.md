@@ -14,6 +14,7 @@
 | `kiosk-auto-start.html` | `Compose-KioskAutoRun` |
 | `margin-check.html` | 웹사이트 https://margincheck.store |
 | 메뉴 원가 계산기 (`index.html` 카드, 각 페이지 '다른 프로그램') | `profit-calculator` |
+| 본사 공지 검색 (`index.html` 맨 아래 카드, 각 페이지 '다른 프로그램') | `notice-search` (https://notice-finder.duckdns.org) |
 
 - 릴리스 버전·날짜·크기: https://github.com/coffee-manager/deploy/releases. 페이지의 `data-r` 기본값도 최신으로 맞춘다.
 - 앱오더 대표 그림 `img/apporder/auto-accept.svg` 는 실제 화면이 아닌 그림이라 프로그램 화면이 바뀌어도 그대로 둔다.
